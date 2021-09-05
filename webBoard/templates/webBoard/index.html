@@ -1,0 +1,140 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--UIkit CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"/>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Gamja+Flower%7CNoto+Sans+KR%7CPoor+Story" rel="stylesheet">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--Custom Style-->
+    <link rel="stylesheet" type="text/css" href="{% static 'webBoard/assets/css/index_style.css' %}">
+
+    <title>King's Board</title>
+</head>
+<body>
+    <!--nav-->
+    <div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <nav class="uk-navbar-container uk-navbar-transparent" style="padding:0px 10px 0px 10px" uk-sticky="animation: uk-animation-slide-top" uk-navbar style="position: relative; z-index: 980;">
+        <div class="uk-navbar-left">
+            <ul class="uk-navbar-nav">
+                <a class="uk-navbar-item uk-logo" href="#">King's Board</a>
+            </ul>
+        </div>
+
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+                <li><a href="#"><span uk-icon="pencil"></span></a></li>
+                <li><a href="#">왕준영의 보드</a></li>
+                <li><a href="#"><span uk-icon="user"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <!--container | 게시글 나오는 곳-->
+    <div class="uk-container">
+        <div class="uk-card uk-card-default uk-margin-small">
+            <div class="uk-card-header">
+                <div class="uk0grid-small uk-flex-middle" uk-grid>
+                    <div class="uk-width-expand">
+                        <h3 class="uk-card-title uk-margin-remove-bottom">치노가 최고다!</h3>
+                        <p class="uk-text-meta uk-margin-remove-top">
+                            <time datetime-:2016-04-01T19:00">2019년 12월 4일 오후 1시 30분</time>
+                        </p>
+                    </div>
+                    <a class="uk-align-right uk-icon-link uk-margin-remove-bottom" uk-tooltip="더보기">
+                        <span uk-icon="more"></span>
+                        <div uk-dropdown="mode: click">
+                            <ul class="uk-nav uk-dropdown-nav">
+                                <li><a href="#">게시물로 이동</a></li>
+                                <li><a href="#">공유 하기</a></li>
+                                <li><a href="#">링크 복사</a></li>
+                                <li class="uk-nav-header">게시물관리</li>
+                                <li><a href="#">수정</a></li>
+                                <li><a href="#">삭제</a></li>
+                                <li><a href="#" style="color: #f0506e">신고 하기</a></li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="uk-card-body uk-padding-remove">
+                <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slideshow>
+                    <ul class="uk-slideshow-items">
+                        <li>
+                            <img data-src="https://cdn.discordapp.com/attachments/489756402873532418/567320731436711936/fe0f6c0cb9627340.png" alt="" uk-cover uk-img="target: !ul > :last-child, !* +*">
+                        </li>
+                        <li>
+                            <img data-src="https://s3.orbi.kr/data/file/gallery/3542387722_CjhmLxZX_b0365026_568388e54b163.jpg" alt="" uk-cover uk-img="target: !* -*, !* +*">
+                        </li>
+                        <li>
+                            <img data-src="http://pds21.egloos.com/pds/201512/30/26/b0365026_568388feba226.jpg" alt="" uk-cover uk-img="target: !* -*, !ul > :first-child">
+                        </li>
+                        <li>
+                            <img data-src="http://modakbul.net/files/attach/images/30108/040/074/f0a1ce2e2292c4da0f1398dde1e78932.jpg" alt="" uk-cover uk-img="target: !ul > :last-child, !* +*">
+                        </li>
+                        <li>
+                            <img data-src="http://modakbul.net/files/attach/images/30108/040/074/0cca5c7ea2790195a67e69a27e3e7679.jpg" alt="" uk-cover uk-img="target: !ul > :last-child, !* +*">
+                        </li>
+                    </ul>
+                    
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+                </div>
+                <div class="uk-padding">
+                    12월 4일은 치노 생일입니다. 하하하!<br> 초코파이 사러갑니다.
+                </div>
+
+            </div>
+
+            <div class="uk-card-footer">
+                <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="좋아요">
+                    <span uk-icon="heart"></span>
+                </a>
+                <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="댓글 달기">
+                    <span uk-icon="comment"></span>
+                </a>
+                <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="태그 보기" uk-toggle="target: #hashtag; animation: uk-animation-fade;">
+                    <span uk-icon="hashtag"></span>
+                </a>
+                    </a>
+                <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="공유">
+                    <span uk-icon="social"></span>
+                </a>
+                    <a class="uk-align-left uk-icon-link uk-margin-remove-bottom" uk-tooltip="링크 복사">
+                    <span uk-icon="link"></span>
+                </a>
+            </div>
+            <div class="uk-card-footer" style="border-top: none;" id="hashtag" aria-hidden="true" hidden>
+            <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#치노</a>
+            <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#해시태그_쓰지마</a>
+            <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#주문토끼</a>
+            <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#히히</a>
+            <a class="uk-icon-link" style="text-decoration: none;" href="#" class="uk-link-reset">#짱좋다</a>
+        </div>
+        <div class="uk-card-footer" style="border-top: none;">
+        <div>
+            <span style="color:rgb(46, 44, 56); font-weight: 400; font-size: 18px;">loGTve</span>
+            <span>크~ 인정합니다.</span>
+        </div>
+        <div>
+                <span style="color:rgb(46, 44, 56); font-weight: 400; font-size: 18px;">     ㄴ Chinokawai</span>
+                <span>그래도 초코파이는 조금...</span>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{% static 'webBoard/assets/js/index_script.js' %}"></script>
+</body>
+</html>
